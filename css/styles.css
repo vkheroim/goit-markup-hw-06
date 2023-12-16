@@ -1,5 +1,3 @@
-/* background: background-color background-image background-repeat background-position background-attachment background-size */
-/* General rules */
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -40,10 +38,6 @@ img {
   display: block;
 }
 
-.icon {
-  fill: #f4f4fd;
-}
-
 .section-title {
   font-size: 36px;
   font-weight: 700;
@@ -62,187 +56,11 @@ img {
 }
 
 .container {
-  width: 1158px;
-  margin: 0 auto;
+  max-width: 318px;
   padding: 0 15px;
-}
-
-/* ------------------------------------------- */
-
-/* HEADER */
-
-/* CONTAINERS */
-.page-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #e7e9fc;
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-}
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 15px;
-}
-
-.navigation {
-  display: flex;
-  align-items: center;
-}
-
-/* LOGOTYPE */
-
-.logo-link {
-  text-transform: uppercase;
-  font-size: 18px;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-  color: #4d5ae5;
-  margin-right: 76px;
-}
-
-.logo-link span {
-  color: #2e2f42;
-}
-
-/* NAVIGATION */
-
-.navigation-list {
-  text-transform: capitalize;
-  color: #2e2f42;
-  display: flex;
-  gap: 40px;
-  align-items: center;
-}
-
-.navigation-list-link {
-  display: flex;
-  flex-direction: column;
-  font-weight: 500;
-  padding: 24px 0;
-  position: relative;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.navigation-list-item:first-child {
-  color: #404bbf;
-}
-
-.navigation-list-link:hover,
-.navigation-list-link:focus {
-  color: #404bbf;
-}
-
-.active-page-underline::after {
-  content: "";
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: #404bbf;
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-}
-
-/* COMMUNICATION */
-
-.communication-info {
-  font-style: normal;
-}
-
-.communication-list {
-  display: flex;
-  gap: 40px;
-}
-
-.communication-link {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.communication-list li:hover,
-.communication-list li:focus {
-  color: #404bbf;
-}
-
-/* ------------------------------------------- */
-
-/* SECTION 1 */
-
-/* CONTAINER */
-.section-hero {
-  background-color: #2e2f42;
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url(../images/hero-section/hero-background.jpg);
-  background-size: cover;
-  padding: 188px 0;
-  text-align: center;
-  background-repeat: no-repeat;
-  background-position: center;
-  max-width: 1440px;
   margin: 0 auto;
 }
 
-/* CONTENT */
-.main-title {
-  margin: 0 auto;
-  margin-bottom: 48px;
-  color: #fff;
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 1.07;
-  letter-spacing: 0.02em;
-  text-align: center;
-  max-width: 496px;
-}
-
-.main-title span {
-  text-transform: lowercase;
-}
-
-/* BUTTON */
-
-.hero-button {
-  /* text */
-  color: #fff;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  background-color: #4d5ae5;
-  text-transform: capitalize;
-  font-style: normal;
-  line-height: 1.5;
-  cursor: pointer;
-  /* style look */
-  padding: 16px 32px;
-  border-radius: 4px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  border-style: none;
-  min-width: 169px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hero-button:hover,
-.hero-button:focus {
-  background-color: #404bbf;
-}
-
-/* ------------------------------------------- */
-
-/* SECTION 2 */
-
-/* CONTAINER */
-.section-tactic {
-  padding: 120px 0;
-}
-
-/* HIDDEN TITLE */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -257,57 +75,289 @@ img {
   overflow: hidden;
 }
 
-/* CONTENT */
+/* ========== /COMMON STYLES =========== */
 
-.tactic-icon-container {
+/* 
+1x - 96dpi
+2x - 192dpi
+3x - 288dpi
+*/
+
+/* ========== MOBILE HEADER =========== */
+.navigation-list {
+  display: none;
+}
+
+.communication-info {
+  display: none;
+}
+
+.header-container {
   display: flex;
-  margin-bottom: 8px;
   align-items: center;
-  justify-content: center;
-  height: 112px;
-  background-color: #f4f4fd;
+  justify-content: space-between;
+}
+
+.logo-link {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: #4d5ae5;
+  margin-right: 76px;
+  padding-top: 17.5px;
+  padding-bottom: 17.5px;
+  display: block;
+}
+
+.logo-link span {
+  color: #2e2f42;
+}
+
+/* ========== /HEADER STYLES (mobile) =========== */
+
+/* ============== MOBILE MENU ================ */
+@media screen and (max-width: 767px) {
+  .mobile-open-btn {
+    border: none;
+    background-color: transparent;
+    stroke: #2e2f42;
+    padding: 0;
+    line-height: 0;
+  }
+
+  .mobile-menu-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mobile-menu-wrapper.is-open {
+    transform: translateX(0%);
+  }
+
+  .mobile-menu-container {
+    position: relative;
+  }
+
+  .mobile-menu-close-button {
+    background-color: transparent;
+    line-height: 0;
+    padding: 8px;
+    border-radius: 50%;
+    border: 1px solid rgba(46, 47, 66, 0.1);
+    position: absolute;
+    top: 24px;
+    right: 24px;
+  }
+
+  .mobile-menu-navigation {
+    padding-top: 72px;
+  }
+
+  .mobile-menu-item {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11; /* 111.111% */
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #2e2f42;
+    margin-bottom: 40px;
+  }
+
+  .mobile-menu-item:first-child {
+    color: #404bbf;
+  }
+
+  .mobile-menu-item:hover,
+  .mobile-menu-item:focus {
+    color: #404bbf;
+  }
+
+  .mobile-communication {
+    margin-top: 168px;
+  }
+
+  .mobile-communication-list-item {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2; /* 120% */
+    letter-spacing: 0.02em;
+    font-style: bold;
+    font-style: normal;
+    margin-bottom: 24px;
+  }
+
+  .mobile-communication-list-item:hover,
+  .mobile-communication-list-item:focus {
+    color: #404bbf;
+  }
+
+  .mobile-menu-social {
+    margin-top: 48px;
+    display: flex;
+    gap: 40px;
+  }
+
+  .mobile-menu-social-link {
+    background-color: #4d5ae5;
+    line-height: 0;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+
+  .mobile-menu-social-link:hover,
+  .mobile-menu-social-link:focus {
+    background-color: #404bbf;
+  }
+
+  /* ============== MOBILE TACTIC =============== */
+}
+
+/* ============== SECTION HERO MOBILE ================ */
+
+.section-hero {
+  background-color: #2e2f42;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero-section/hero-mobile.jpg);
+  background-size: cover;
+  padding: 72px 0;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+}
+
+@media screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2ddpx) and (max-width: 767px),
+  screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
+  .section-hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-section/hero-mobile@2x.jpg);
+  }
+}
+
+.main-title {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.11; /* 111.111% */
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #fff;
+  max-width: 200px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.hero-button {
+  /* text */
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  text-transform: capitalize;
+  background-color: #4d5ae5;
+  padding: 16px 32px;
   border-radius: 4px;
-  border: 1px solid #8e8f99;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  border-style: none;
+  min-width: 169px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.tactic-list {
-  display: flex;
-  gap: 24px;
-  justify-content: center;
+.hero-button:hover,
+.hero-button:focus {
+  background-color: #404bbf;
+}
+/* ============== /SECTION HERO MOBILE ================ */
+
+/* ============== SECTION TACTIC MOBILE ================ */
+
+.section-tactic {
+  padding: 96px 0;
 }
 
-.tactic-list-item {
-  width: calc((100% - 72px) / 4);
+.tactic-icon {
+  display: none;
 }
 
-.tactic-title {
+.tactic-list-item:not(:last-child) {
+  margin-bottom: 72px;
+}
+
+.section-specific-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11; /* 111.111% */
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  text-align: center;
+  color: #2e2f42;
   margin-bottom: 8px;
 }
 
-/* ------------------------------------------- */
+.tactic-list-item-text {
+  color: #434455;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.02em;
+}
 
-/* SECTION 3 */
+/* ============== /SECTION TACTIC MOBILE ================ */
 
-/* CONTAINER */
+/* ============== SECTION TEAM MOBILE ================ */
 .section-team {
   background-color: #f4f4fd;
   text-transform: capitalize;
-  padding: 120px 0;
+  padding: 96px 0;
 }
 
 .team-list {
   display: flex;
-  justify-content: center;
-  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
 }
 
 .team-list-item {
   background-color: #ffffff;
-  width: calc((100% - 72px) / 4);
+  width: 264px;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.mobile-specific-title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2; /* 120% */
+  letter-spacing: 0.02em;
 }
 
 .team-list-text-content {
@@ -351,29 +401,24 @@ img {
 .team-social-link:focus {
   background-color: #404bbf;
 }
+/* ============== /SECTION TEAM MOBILE ================ */
 
-/* ------------------------------------------- */
-
-/* SECTION 4 */
+/* ============== SECTION PORTFOLIO MOBILE ================ */
 
 .section-portfolio {
   text-transform: capitalize;
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
-
-.portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  row-gap: 48px;
-  column-gap: 24px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .portfolio-list-item {
   border: 1px solid var(--CORNFLOWER, #e7e9fc);
-  width: calc((100% - 48px) / 3);
+  width: 288px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-list-item:not(:last-child) {
+  margin-bottom: 48px;
 }
 
 .portfolio-list-item:hover {
@@ -389,6 +434,10 @@ img {
 .portfolio-list-item-image {
   position: relative;
   overflow: hidden;
+}
+
+.mobile-specific-title {
+  text-align: left;
 }
 
 .portfolio-list-text-content {
@@ -418,21 +467,23 @@ img {
 .portfolio-list-item:hover .portfolio-list-item-overlay {
   transform: translateY(0%);
 }
+/* ============== /SECTION PORTFOLIO MOBILE ================ */
 
-/* ------------------------------------------- */
-
-/* FOOTER */
+/* ============== FOOTER MOBILE ================ */
 
 .section-footer {
   background-color: #2e2f42;
-  padding: 100px 0;
+  padding: 96px 0;
   color: #f4f4fd;
 }
 
 .footer-logo-link {
   color: #4d5ae5;
   margin-bottom: 16px;
-  display: inline-block;
+  padding: 0;
+  display: block;
+  text-align: center;
+  margin-right: 0;
 }
 
 .footer-logo-link span {
@@ -440,27 +491,15 @@ img {
 }
 
 .footer-text {
-  max-width: 264px;
-}
-
-.footer-content {
-  display: flex;
-  align-items: baseline;
-}
-
-.footer-logo-text {
-  margin-right: 120px;
-}
-
-.footer-socials {
-  display: flex;
-  flex-direction: column;
-  margin-right: 80px;
+  max-width: 288px;
+  margin-bottom: 72px;
 }
 
 .footer-socials-list {
   display: flex;
   gap: 16px;
+  justify-content: center;
+  margin-bottom: 72px;
 }
 
 .footer-socials-text {
@@ -470,11 +509,7 @@ img {
   letter-spacing: 0.02em;
   color: #ffffff;
   margin-bottom: 16px;
-}
-
-.footre-socials-list-item {
-  width: 40px;
-  height: 40px;
+  text-align: center;
 }
 
 .footer-list-social-link {
@@ -494,18 +529,21 @@ img {
   background-color: #31d0aa;
 }
 
+.footer-subscribe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
 .footer-subscribe-text {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #ffffff;
+  text-align: center;
   margin-bottom: 16px;
-}
-
-.footer-subscribe-form {
-  display: flex;
-  gap: 24px;
 }
 
 .footer-subscribe-field {
@@ -548,7 +586,9 @@ img {
   margin-left: 16px;
 }
 
-/* BACKDROP STYLES */
+/* ============== /FOOTER MOBILE ================ */
+
+/* ============== BACKDROP MOBILE ================ */
 .backdrop {
   position: fixed;
   top: 0;
@@ -576,8 +616,8 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 408px;
-  min-height: 584px;
+  width: 288px;
+  min-height: 623px;
   background-color: #fcfcfc;
   border-radius: 4px;
   padding: 24px;
@@ -780,4 +820,810 @@ img {
 .review-form-button:hover,
 .review-form-button:focus {
   background-color: #404bbf;
+}
+/* ============== /BACKDROP MOBILE ================ */
+
+/* ========== TABLET =========== */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 736px;
+    padding: 0;
+  }
+
+  /* ============= TABLET HEADER ============== */
+
+  .navigation {
+    display: flex;
+  }
+
+  .navigation-list {
+    text-transform: capitalize;
+    color: #2e2f42;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .logo-link {
+    padding: 25.5px 0;
+    margin-right: 120px;
+  }
+
+  .navigation-list-link {
+    display: flex;
+    font-size: 16px;
+    flex-direction: column;
+    font-weight: 500;
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding-bottom: 20px;
+    padding-top: 24px;
+  }
+
+  .navigation-list-item:first-child {
+    color: #404bbf;
+  }
+
+  .navigation-list-link:hover,
+  .navigation-list-link:focus {
+    color: #404bbf;
+  }
+
+  .active-page-underline::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #404bbf;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+  }
+
+  .communication-info {
+    display: flex;
+  }
+
+  .communication-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .communication-list-item {
+    color: #434455;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.17; /* 116.667% */
+    letter-spacing: 0.04em;
+  }
+
+  .communication-link {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .communication-list li:hover,
+  .communication-list li:focus {
+    color: #404bbf;
+  }
+
+  .mobile-menu-wrapper {
+    display: none;
+  }
+
+  .mobile-open-btn {
+    display: none;
+  }
+
+  /* ============== SECTION HERO TABLET ============= */
+  .section-hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-section/hero-tablet.jpg);
+    padding: 112px 0;
+  }
+
+  .main-title {
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.11; /* 111.111% */
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #fff;
+    max-width: 496px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 36px;
+  }
+
+  /* ============== /SECTION HERO TABLET ============= */
+
+  /* ============== SECTION TACTIC TABLET ============= */
+
+  .section-tactic {
+    padding: 96px 0;
+  }
+
+  .tactic-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    column-gap: 24px;
+  }
+
+  .tactic-list-item {
+    max-width: 356px;
+  }
+
+  .section-specific-title {
+    text-align: left;
+  }
+
+  /* ============== /SECTION TACTIC TABLET ============= */
+
+  /* ============== SECTION TEAM TABLET ============= */
+
+  .section-team {
+    padding: 96px 0;
+  }
+
+  .team-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 24px;
+    row-gap: 64px;
+  }
+
+  .team-list-item {
+    background-color: #ffffff;
+    width: 264px;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+      0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+      0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  }
+
+  .team-list-text-content {
+    padding: 32px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-name-title {
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .team-list-text {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .team-social-list {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+  }
+
+  .team-social-link {
+    display: flex;
+    line-height: 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #4d5ae5;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .team-social-link:hover,
+  .team-social-link:focus {
+    background-color: #404bbf;
+  }
+  /* ============== /SECTION TEAM TABLET ============= */
+
+  /* ============== SECTION PORTFOLIO TABLET ============= */
+
+  .section-portfolio {
+    text-transform: capitalize;
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  .portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 72px;
+    column-gap: 24px;
+  }
+
+  .portfolio-list-item {
+    border: 1px solid var(--CORNFLOWER, #e7e9fc);
+    width: 356px;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .portfolio-list-item:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  }
+
+  .portfolio-list-item img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .portfolio-list-item-image {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .portfolio-list-text-content {
+    padding: 32px 16px;
+    border: 1px solid #e7e9fc;
+    border-top: none;
+  }
+
+  .portfolio-list-item-overlay {
+    color: #f4f4fd;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 40px 32px;
+    letter-spacing: 0.02em;
+    height: 100%;
+    width: 100%;
+    background-color: #4d5ae5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: auto;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .portfolio-list-item:hover .portfolio-list-item-overlay {
+    transform: translateY(0%);
+  }
+
+  /* ============== /SECTION PORTFOLIO TABLET ============= */
+  /* ============== FOOTER TABLET ============= */
+
+  .section-footer {
+    background-color: #2e2f42;
+    padding: 96px 0;
+    color: #f4f4fd;
+  }
+
+  .footer-logo-link {
+    color: #4d5ae5;
+    margin-bottom: 16px;
+    display: inline-block;
+  }
+
+  .footer-logo-link span {
+    color: #f4f4fd;
+  }
+
+  .footer-text {
+    max-width: 264px;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    padding-left: 108px;
+  }
+
+  .footer-logo-text {
+    margin-right: 24px;
+  }
+
+  .footer-socials {
+    display: flex;
+    flex-direction: column;
+    margin-right: 80px;
+  }
+
+  .footer-socials-list {
+    display: flex;
+    gap: 16px;
+  }
+
+  .footer-socials-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    margin-bottom: 16px;
+    text-align: left;
+  }
+
+  .footer-socials-list-item {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer-list-social-link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    line-height: 0;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .footer-list-social-link:hover,
+  .footer-list-social-link:focus {
+    background-color: #31d0aa;
+  }
+
+  .footer-subscribe-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    margin-bottom: 16px;
+    text-align: left;
+  }
+
+  .footer-subscribe-form {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .footer-subscribe-field {
+    background-color: transparent;
+    width: 264px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #ffffff;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    padding-left: 16px;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5; /* 200% */
+    letter-spacing: 0.04em;
+  }
+
+  .footer-subscribe-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 165px;
+    height: 40px;
+    padding: 8px 24px;
+    border-radius: 4px;
+    background-color: #4d5ae5;
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5; /* 150% */
+    letter-spacing: 0.04em;
+    font-family: "Roboto", sans-serif;
+    fill: #ffffff;
+    cursor: pointer;
+  }
+
+  .footer-subscribe-icon {
+    margin-left: 16px;
+  }
+
+  /* ============== /FOOTER TABLET ============= */
+
+  /* ============== BACKDROP TABLET ============= */
+  .modal {
+    width: 408px;
+    min-height: 584px;
+  }
+  /* ============== /BACKDROP TABLET ============= */
+}
+
+@media screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2ddpx) and (min-width: 768px),
+  screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
+  .section-hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-section/hero-tablet@2x.jpg);
+  }
+}
+
+/* ========== LAPTOP =========== */
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+  }
+
+  .navigation-list {
+    display: flex;
+  }
+
+  .communication-info {
+    display: flex;
+  }
+
+  .communication-list {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .communication-list-item {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5; /* 150% */
+    letter-spacing: 0.02em;
+  }
+
+  .communication-link {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .communication-list li:hover,
+  .communication-list li:focus {
+    color: #404bbf;
+  }
+
+  /* ============== SECTION HERO DESKTOP ============= */
+  .section-hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-section/hero-desktop.jpg);
+  }
+
+  .section-hero {
+    padding: 188px 0;
+  }
+
+  .main-title {
+    margin-bottom: 48px;
+  }
+  /* ============== /SECTION HERO DESKTOP ============= */
+
+  /* ============== SECTION TACTIC DESKTOP ============= */
+  .section-tactic {
+    padding: 120px 0;
+  }
+
+  .tactic-icon-container {
+    display: flex;
+    margin-bottom: 8px;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    border: 1px solid #8e8f99;
+  }
+
+  .tactic-icon {
+    display: block;
+  }
+
+  .tactic-list {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+  }
+
+  .tactic-list-item {
+    width: calc((100% - 72px) / 4);
+  }
+
+  .section-specific-title {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.2; /* 120% */
+    letter-spacing: 0.02em;
+  }
+  /* ============== /SECTION TACTIC DESKTOP ============= */
+
+  /* ============== SECTION TEAM DESKTOP ============= */
+
+  .section-team {
+    background-color: #f4f4fd;
+    text-transform: capitalize;
+    padding: 120px 0;
+  }
+
+  .team-list {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .team-list-item {
+    background-color: #ffffff;
+    width: calc((100% - 72px) / 4);
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+      0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+      0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  }
+
+  .team-list-text-content {
+    padding: 32px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-name-title {
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .team-list-text {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .team-social-list {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+  }
+
+  .team-social-link {
+    display: flex;
+    line-height: 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #4d5ae5;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .team-social-link:hover,
+  .team-social-link:focus {
+    background-color: #404bbf;
+  }
+
+  /* ============== /SECTION TEAM DESKTOP ============= */
+
+  /* ============== SECTION PORTFOLIO DESKTOP ============= */
+  .section-portfolio {
+    text-transform: capitalize;
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 48px;
+    column-gap: 24px;
+  }
+
+  .portfolio-list-item {
+    border: 1px solid var(--CORNFLOWER, #e7e9fc);
+    width: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .portfolio-list-item:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  }
+
+  .portfolio-list-item img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .portfolio-list-item-image {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .portfolio-list-text-content {
+    padding: 32px 16px;
+    border: 1px solid #e7e9fc;
+    border-top: none;
+  }
+
+  .portfolio-list-item-overlay {
+    color: #f4f4fd;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 40px 32px;
+    letter-spacing: 0.02em;
+    height: 100%;
+    width: 100%;
+    background-color: #4d5ae5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: auto;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .portfolio-list-item:hover .portfolio-list-item-overlay {
+    transform: translateY(0%);
+  }
+
+  /* ============== /SECTION PORTFOLIO DESKTOP ============= */
+
+  /* ============== FOOTER DESKTOP ============= */
+  .section-footer {
+    background-color: #2e2f42;
+    padding: 100px 0;
+    color: #f4f4fd;
+  }
+
+  .footer-logo-link {
+    color: #4d5ae5;
+    margin-bottom: 16px;
+    display: inline-block;
+  }
+
+  .footer-logo-link span {
+    color: #f4f4fd;
+  }
+
+  .footer-text {
+    max-width: 264px;
+  }
+
+  .footer-content {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    padding-left: 0;
+  }
+
+  .footer-logo-text {
+    margin-right: 120px;
+  }
+
+  .footer-socials {
+    display: flex;
+    flex-direction: column;
+    margin-right: 80px;
+  }
+
+  .footer-socials-list {
+    display: flex;
+    gap: 16px;
+  }
+
+  .footer-socials-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    margin-bottom: 16px;
+  }
+
+  .footer-socials-list-item {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer-list-social-link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    line-height: 0;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .footer-list-social-link:hover,
+  .footer-list-social-link:focus {
+    background-color: #31d0aa;
+  }
+
+  .footer-subscribe-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    margin-bottom: 16px;
+  }
+
+  .footer-subscribe-form {
+    display: flex;
+    gap: 24px;
+  }
+
+  .footer-subscribe-field {
+    background-color: transparent;
+    width: 264px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #ffffff;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    padding-left: 16px;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5; /* 200% */
+    letter-spacing: 0.04em;
+  }
+
+  .footer-subscribe-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 165px;
+    height: 40px;
+    padding: 8px 24px;
+    border-radius: 4px;
+    background-color: #4d5ae5;
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5; /* 150% */
+    letter-spacing: 0.04em;
+    font-family: "Roboto", sans-serif;
+    fill: #ffffff;
+    cursor: pointer;
+  }
+
+  .footer-subscribe-icon {
+    margin-left: 16px;
+  }
+  /* ============== /FOOTER DESKTOP ============= */
+}
+
+@media screen and (min-resolution: 192dpi) and (min-width: 1158px),
+  screen and (min-resolution: 2ddpx) and (min-width: 1158px),
+  screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
+  .section-hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-section/hero-desktop@2x.jpg);
+  }
 }
