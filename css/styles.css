@@ -147,6 +147,11 @@ img {
 
   .mobile-menu-container {
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+    padding-bottom: 40px;
   }
 
   .mobile-menu-close-button {
@@ -183,8 +188,8 @@ img {
     color: #404bbf;
   }
 
-  .mobile-communication {
-    margin-top: 168px;
+  .mobile-communication-list-item:not(:last-child) {
+    color: #4d5ae5;
   }
 
   .mobile-communication-list-item {
@@ -490,8 +495,15 @@ img {
   color: #f4f4fd;
 }
 
+.footer-logo-text {
+  margin-bottom: 72px;
+}
+
 .footer-text {
   max-width: 288px;
+}
+
+.footer-socials {
   margin-bottom: 72px;
 }
 
@@ -499,7 +511,6 @@ img {
   display: flex;
   gap: 16px;
   justify-content: center;
-  margin-bottom: 72px;
 }
 
 .footer-socials-text {
@@ -548,7 +559,7 @@ img {
 
 .footer-subscribe-field {
   background-color: transparent;
-  width: 264px;
+  width: 288px;
   height: 40px;
   border-radius: 4px;
   border: 1px solid #ffffff;
@@ -953,10 +964,15 @@ img {
     flex-wrap: wrap;
     row-gap: 72px;
     column-gap: 24px;
+    align-items: center;
   }
 
   .tactic-list-item {
-    max-width: 356px;
+    width: calc((100% - 24px) / 2);
+  }
+
+  .tactic-list-item:not(:last-child) {
+    margin-bottom: 0;
   }
 
   .section-specific-title {
@@ -1050,8 +1066,12 @@ img {
 
   .portfolio-list-item {
     border: 1px solid var(--CORNFLOWER, #e7e9fc);
-    width: 356px;
+    width: calc((100% - 24px) / 2);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .portfolio-list-item:not(:last-child) {
+    margin-bottom: 0;
   }
 
   .portfolio-list-item:hover {
@@ -1110,6 +1130,7 @@ img {
     color: #4d5ae5;
     margin-bottom: 16px;
     display: inline-block;
+    padding: 0;
   }
 
   .footer-logo-link span {
@@ -1118,13 +1139,17 @@ img {
 
   .footer-text {
     max-width: 264px;
+    margin-bottom: 0;
   }
 
   .footer-content {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-    padding-left: 108px;
+  }
+
+  .footer-content.container {
+    max-width: 584px;
   }
 
   .footer-logo-text {
@@ -1134,7 +1159,7 @@ img {
   .footer-socials {
     display: flex;
     flex-direction: column;
-    margin-right: 80px;
+    margin: 0;
   }
 
   .footer-socials-list {
@@ -1257,6 +1282,7 @@ img {
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
+    padding: 0 15px;
   }
 
   .navigation {
@@ -1337,6 +1363,10 @@ img {
     display: flex;
     gap: 24px;
     justify-content: center;
+  }
+
+  .tactic-list-item-text {
+    font-weight: 400;
   }
 
   .tactic-list-item {
@@ -1507,6 +1537,10 @@ img {
     max-width: 264px;
   }
 
+  .footer-content.container {
+    max-width: 1128px;
+  }
+
   .footer-content {
     display: flex;
     align-items: baseline;
@@ -1516,6 +1550,7 @@ img {
 
   .footer-logo-text {
     margin-right: 120px;
+    margin-bottom: 0;
   }
 
   .footer-socials {
